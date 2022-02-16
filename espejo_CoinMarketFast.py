@@ -4,21 +4,21 @@ import pymongo
 
 
 ## setup db
-mongodb_key = "mongodb+srv://Xicano22:CiudadDelSolG20@cluster0.jt7sg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+mongodb_key = "your_mongDB_key"
 client = pymongo.MongoClient(mongodb_key)
 db_name = "Bote"
 collection_name = "BoteCol"
 db = client[db_name][collection_name]
 
-phone_number = '525612720431'
-api_id = '7504340'
-api_hash = 'a2d9b532bfc53b81ae70eb0293944b26'
+phone_number = 'phone_num'
+api_id = 'api_id'
+api_hash = 'api_hash'
 
 tgclient = TelegramClient(phone_number, api_id, api_hash)
 
-id_Canal_Copia = -1001793288513
-#id_canal_original = -1001519789792
-id_canal_original = -1001252203928 #####Canal de prueba
+id_Canal_Copia = -10017932885
+#id_canal_original = -10015197897
+id_canal_original = -10012522039 #####Canal de prueba
 @tgclient.on(events.NewMessage(id_canal_original))
 async def my_event_handler(event):    
     text = event.raw_text
