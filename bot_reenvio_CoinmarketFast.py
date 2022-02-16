@@ -4,12 +4,12 @@ from telethon import functions, types, events
 from telethon.tl.custom import Button
 
 # start the bot client
-tgclient = TelegramClient('BOT_REENVIO', '7504340', 'a2d9b532bfc53b81ae70eb0293944b26')
-tgclient.start(bot_token='5270500369:AAExsONg5Rrn4G1LOmx7vHeQ6D4V3KsfGBo')
+tgclient = TelegramClient('BOT_REENVIO', 'id', 'hash')
+tgclient.start(bot_token='token')
 
-id_Canal_Copia = -1001793288513
-#id_canal_original = -1001519789792
-id_CoinmarketFast_ES = -1001252203928 #####Canal de prueba
+id_Canal_Copia = -10017932885
+#id_canal_original = -1001519789
+id_CoinmarketFast_ES = -10012522039 #####Canal de prueba
 @tgclient.on(events.NewMessage(id_Canal_Copia))
 # function that sends the message
 async def my_event_handler(event): 
